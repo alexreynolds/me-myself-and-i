@@ -15,55 +15,25 @@ Copyright Alex Reynolds, 2013
 <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="utils.js"></script>	
+
 </head>
 
 <body>
 
-<!-- Side bar for navigation -->
-<div class="sidepanel">
+<!-- Navigation -->
+<div id="navwrapper">
 
-<br />
-
-<ul class="nav-menu">
-	<li selected>
-	    <a href="#">
-	        <div class="nav-content">
-	            <h2 class="nav-main">HOME</h2>
-	        </div>
-	    </a>
-	</li>
-	<li>
-	    <a href="#">
-	        <div class="nav-content">
-	            <h2 class="nav-main">ILLUSTRATION</h2>
-	        </div>
-	    </a>
-	</li>
-	<li>
-	    <a href="#">
-	        <div class="nav-content">
-	            <h2 class="nav-main">PHOTOGRAPHY</h2>
-	        </div>
-	    </a>
-	</li>
-	<li>
-	    <a href="#">
-	        <div class="nav-content">
-	            <h2 class="nav-main">DESIGN</h2>
-	        </div>
-	    </a>
-	</li>
-	<li>
-	    <a href="#">
-	        <div class="nav-content">
-	            <h2 class="nav-main">ABOUT</h2>
-	        </div>
-	    </a>
-	</li>
+<ul>
+	<li class="selected"><a href="#">HOME</a></li>
+	<li><a href="#">ILLUSTRATION</a></li>
+	<li><a href="#">DESIGN</a></li>
+	<li><a href="#">PHOTOGRAPHY</a></li>
+	<li><a href="#">ABOUT</a></li>
 </ul>
 
-
-<!-- End side panel div -->
+<!-- End navigation wrapper div -->
 </div>
 
 
@@ -72,9 +42,29 @@ Copyright Alex Reynolds, 2013
 
 	<div class="mainchild">
 
-<h1>hi, i'm <br />
-	<span style="color:#c2ff1f">alex reynolds</span>.</h1>
-	<span style="font-size: 2em">&amp; </span><span style="font-size: 1.7em">I DO A VARIETY OF THINGS.</span>
+	<div id="brainswrapper" align="center">
+
+		<div id="brains">
+			<img class="bottom" src="brainsgreen-01.png" alt=""/>
+			<img class="top" id="leftbrain" src="brains-01.png" alt=""/>
+		</div>
+		<div id="brains">
+			<img class="bottom" src="brainsgreen-02.png" alt=""/>
+			<img class="top" id="rightbrain" src="brains-02.png" alt=""/>
+		</div>
+
+	</div>
+
+	<div id="leftdesc" class="braindesc">LEFT STUFF</div>
+	<div id="rightdesc" class="braindesc">RIGHT STUFF</div>
+
+	<br>
+
+	<h1>hi, i'm <br />
+	<span style="color:#c2ff1f">alex reynolds</span></h1>
+	<span style="font-size: 1.7em">I AM LEFT</span>
+	<span style="font-size: 2em; color: #3bd8ff"> &amp; </span>
+	<span style="font-size: 1.7em">RIGHT BRAINED</span>
 	<br>
 
 
