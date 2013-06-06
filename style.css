@@ -3,22 +3,53 @@ Copyright Alex Reynolds, 2013
 */
 
 html { 
-  background: url(background.jpg) no-repeat center center fixed; 
+  background: url(images/background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+/* DETERMINES CSS FOR MOBILE DEVICES */
+
+@media screen {
+    
+    img.grayscale {
+        /* No grayscale in mobile */
+    }
+
+    img.grayscale:hover {
+        /* No */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (orientation:portrait) {
+    /*CSS applied when the device is in portrait mode*/
+}
+
+@media screen and (orientation:landscape) {
+    /*CSS applied when the device is in landscape mode*/
+}
+
 body {
 	color: #FFF;
 	font-family: 'Dosis', Arial, sans-serif;
 	font-weight: 400;
-	font-size: .8em;
+	font-size: 1em;
 }
 
 a {
 	text-decoration:none;
+    color: #c2ff1f;
+}
+
+a:visited {
+    text-decoration:none;
+    color: #c2ff1f;
 }
 
 h1 {
@@ -28,67 +59,19 @@ h1 {
     margin-bottom: .2em;
 }
 
-#brainswrapper {
-    width: 308px;
-    overflow: hidden; /* contains floated children */
-    text-align: center;
-    margin: 0 auto;
+.highlight {
+    color:#3bd8ff;
 }
 
-/* The brain images */
-#brains {
-    position: relative;
-    width:154px;
-    height:260px;
-    margin: 0 auto;
-    float:left;
+/* Changes the color of highlighted text */
+::-moz-selection {
+    background-color: #3bd8ff;
+    color: #FFF;
 }
 
-#brains img {
-    position: absolute;
-    width: 154px;
-    height: 260px;
-    left: 0;
-    opacity: 1;
-    -webkit-transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -o-transition: opacity .25s ease-in-out;
-    transition: opacity .25s ease-in-out;
-}
-
-#brains img.top:hover {
-    opacity: 0;
-}
-
-div.braindesc {
-    visibility: hidden;
-}
-
-/* For the "Alex Reynolds" */
-.header {
-	text-align: right;
-	padding-right: 20px;
-}
-
-/* The main content class */
-.main {
-    display:table;
-	left:200px;
-    text-align: center;
-	height: 100%;
-	width: 100%;
-    margin-top:50px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;
-}
-
-.mainchild {
-    display: table-cell;
-    vertical-align: middle;
-    height:100%;
-    width:80%;
-    text-align: center;
+::selection {
+    background-color: #3bd8ff;
+    color: #FFF;
 }
 
 /* FOR THE NAVIGATION */
@@ -126,11 +109,253 @@ div.braindesc {
 
 #navwrapper ul li a:hover {
     color: #c2ff1f;
+    /*
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: #3bd8ff;
+    */
 }
 
 #navwrapper li.selected a {
     color: #3bd8ff;
+}
+
+/* The div containing sub navigation */
+#subwrapper ul {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+
+#subwrapper ul li {
+    display: inline-block;
+}
+
+#subwrapper ul li a {
+    text-decoration: none;
+    padding: .2em;
+    margin: .2em;
+    color: #3bd8ff;
+    font-size: 1em;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+#subwrapper ul li a:hover {
+    color: #FFF;
+}
+
+#subwrapper li.selected a {
+    color: #c2ff1f;
+}
+
+
+/* The main content class */
+.main {
+    display:table;
+    left:200px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-top:50px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.mainchild {
+    display: table-cell;
+    vertical-align: middle;
+    height:100%;
+    width:80%;
+    text-align: center;
+}
+
+
+/* For the brain image on the main  page */
+
+#brainswrapper {
+    width: 308px;
+    overflow: hidden; /* contains floated children */
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* The brain images */
+#brains {
+    position: relative;
+    width:154px;
+    height:260px;
+    margin: 0 auto;
+    float:left;
+}
+
+#brains img {
+    position: absolute;
+    width: 154px;
+    height: 260px;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+#brains img.top:hover {
+    opacity: 0;
+}
+
+div.braindesc {
+    position: absolute;
+    display: none;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+/* Div description of left brain */
+#leftdesc {
+    text-align: right;
+    width: 200px;
+    right: 50%;
+    margin-right: 100px;
+    margin-top: 30px;
+    padding-right: 4%;
+}
+
+/* Div description of right brain */
+#rightdesc {
+    text-align: left;
+    width: 200px;
+    left: 50%;
+    margin-left: 100px;
+    margin-top: 30px;
+    padding-left: 4%;
+}
+
+/* Sub page div */
+.sub {
+    text-align: center;
+    width: 100%;
+}
+
+#design {
+    display:;
+}
+
+/* Portfolio image table */
+
+#portfolio {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio div {
+    margin: 0;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+#portfolio td {
+    font-size: .8em;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+}
+
+#portfolio img {
+    width:150%;
+    height: auto;
+    margin: -25%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#portfolio a:hover {
+    border-bottom: solid 2px #FFF;
+}
+
+/* Grayscale image, color on hover */
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+/* Image title span */
+.title {
+    color: #3bd8ff;
+    font-style: uppercase;
+}
+
+/* Contact info table */
+#contact {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact td {
+    margin: 0;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 10px;
+}
+
+/* The contact icon images */
+#contacticon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    padding-left: 0;
+    float:left;
+}
+
+#contact img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+}
+
+#contacticon img.top:hover {
+    opacity: 0;
+}
+
+
+footer {
+    position: relative;
+    bottom:0;
+    width:100%;
+    height:30px;
+    font-size:.2em;
+    color:#555;
+    text-align: center;
 }

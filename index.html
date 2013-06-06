@@ -8,15 +8,20 @@ Copyright Alex Reynolds, 2013
 
 <head>
 
-<title>Alex Reynolds</title>
+<title>Home</title>
 <meta charset="UTF-8" />
 
+<!-- Imports fonts from Google Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Dosis:400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="style.css" />
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script src="utils.js"></script>	
+<!-- Fits view to device screen width -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/utils.js"></script>	
 
 </head>
 
@@ -26,11 +31,10 @@ Copyright Alex Reynolds, 2013
 <div id="navwrapper">
 
 <ul>
-	<li class="selected"><a href="#">HOME</a></li>
-	<li><a href="#">ILLUSTRATION</a></li>
-	<li><a href="#">DESIGN</a></li>
-	<li><a href="#">PHOTOGRAPHY</a></li>
-	<li><a href="#">ABOUT</a></li>
+	<li class="selected"><a href="index.html">HOME</a></li>
+	<li><a href="portfolio.html">PORTFOLIO</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li><a href="contact.html">CONTACT</a></li>
 </ul>
 
 <!-- End navigation wrapper div -->
@@ -42,25 +46,35 @@ Copyright Alex Reynolds, 2013
 
 	<div class="mainchild">
 
+		<div id="leftdesc" class="braindesc">
+			<span style="text-align: center; color: #3bd8ff;">LEFT BRAIN</span><br>
+			Analytical thinking <br/>
+			blah blah blah <br />
+			degree in CS etc<br />
+		</div>
+
+		<div id="rightdesc" class="braindesc">
+		<span style="text-align: center; color: #3bd8ff;">RIGHT BRAIN</span><br>
+			Creative shit <br/>
+			blah blah blah <br />
+			arts and whatnot<br />
+		</div>
+
 	<div id="brainswrapper" align="center">
 
 		<div id="brains">
-			<img class="bottom" src="brainsgreen-01.png" alt=""/>
-			<img class="top" id="leftbrain" src="brains-01.png" alt=""/>
+			<img class="bottom" src="images/brainsgreen-01.png" alt=""/>
+			<img class="top" id="leftbrain" src="images/brains-01.png" alt=""/>
 		</div>
 		<div id="brains">
-			<img class="bottom" src="brainsgreen-02.png" alt=""/>
-			<img class="top" id="rightbrain" src="brains-02.png" alt=""/>
+			<img class="bottom" src="images/brainsgreen-02.png" alt=""/>
+			<img class="top" id="rightbrain" src="images/brains-02.png" alt=""/>
 		</div>
 
 	</div>
+	
 
-	<div id="leftdesc" class="braindesc">LEFT STUFF</div>
-	<div id="rightdesc" class="braindesc">RIGHT STUFF</div>
-
-	<br>
-
-	<h1>hi, i'm <br />
+	<h1>hi i'm <br />
 	<span style="color:#c2ff1f">alex reynolds</span></h1>
 	<span style="font-size: 1.7em">I AM LEFT</span>
 	<span style="font-size: 2em; color: #3bd8ff"> &amp; </span>
@@ -74,6 +88,11 @@ Copyright Alex Reynolds, 2013
 
 <!-- End main page content -->
 </div>
+
+<br>
+<br>
+
+<footer>Copyright &copy; Alexandra Reynolds, 2013</footer>
 
 
 </body>
